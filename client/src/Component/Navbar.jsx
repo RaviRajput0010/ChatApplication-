@@ -30,7 +30,7 @@ function Navbar() {
     if (!newImg.trim()) return;
 
     try {
-      const res = await fetch(`https://chatapplication-fyaq.onrender.com/updateProfileImage/${userEmail}`, {
+      const res = await fetch(`http://localhost:5000/updateProfileImage/${userEmail}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ profileImg: newImg })
@@ -86,7 +86,7 @@ function Navbar() {
             {showProfileBox && (
               <div className="profile-box">
                 <img
-                  src={userprofile}
+                  src={userprofile== null ? images.noprofile :userprofile}
                   alt="Profile"
                   className="profile-pic"
                 />
