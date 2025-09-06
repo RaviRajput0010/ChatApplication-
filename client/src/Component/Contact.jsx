@@ -49,7 +49,7 @@ function Contact() {
     };
 
     try {
-      const response = await fetch('https://chatapplication-fyaq.onrender.com/newgroupcreate', {
+      const response = await fetch('http://localhost:5000/newgroupcreate', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(obj)
@@ -78,7 +78,12 @@ function Contact() {
           <h3>Chat</h3>
           <div className='rightdiv'>
             <img id='roompic' src={images.talk}  onClick={() => { 
-              setshowcontacts(false)
+              
+               if(screenSize < 480 )
+                  {
+                        setshowcontacts(false)      
+                  }
+                         
               jump('/showroom') }}/>            
             <img id='grouplogo' src={images.group} alt="" onClick={
                ()=>{
@@ -101,10 +106,15 @@ function Contact() {
       {grouparray
         .filter(group => group.type === "group" && group.members?.includes(username))
         .map((i, index) => (
-          <div key={index} className='singlecontact' onClick={()=>setshowcontacts(false)}>
+          <div key={index} className='singlecontact' >
             <div
-              style={{ display: "flex", alignItems: "center", flex: 1, cursor: "pointer" }}
+              style={{ cursor: 'pointer' , justifyContent:'space-between' }}
               onClick={() => {
+                 if(screenSize < 480 )
+                  {
+                        setshowcontacts(false)      
+                  }
+                         
                 jump('/group', {
                   state: {
                     name: i.groupName,
@@ -135,12 +145,18 @@ function Contact() {
                 className='singlecontact'
                 style={{ cursor: 'pointer' }}
                 onClick={() => {
-                  setshowcontacts(false)
+                  if(screenSize < 480 )
+                  {
+                        setshowcontacts(false)      
+                  }
+                                                  
                   jump('/chat', { state: { name: i.name, profile: i.img } });
                 }}
               >
-                <img src={i.img == null ? images.noprofile : i.img} alt="" />
+                <img src={i.img ==null ? images.noprofile : i.img} alt="" />
+
                 <p>{i.name}</p>
+              
               </div>
             ))
           )}
