@@ -134,7 +134,7 @@ async function deleteRoom() {
               {/* Show profile only for receiver */}
               {!isSender && (
                 <img
-                  src={i.senderimg}
+                  src={i.senderimg==null ? images.noprofile : i.senderimg}
                   alt="dp"
                   className="profile-pic"
                 />
