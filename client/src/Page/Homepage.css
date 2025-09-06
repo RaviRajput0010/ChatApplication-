@@ -1,0 +1,49 @@
+.home{
+    height: 100%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home img
+{
+    height: 200px;
+    width: auto;
+}
+
+.hidepage{
+    display: none;
+}
+
+.home .content
+{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 10px;
+    
+}
+
+.home .content p
+{
+    font-size: 1.2rem;
+    color: linear-gradient(#4D84BE,#D9E7EA);
+
+}
+
+.home .logo
+{
+    height: 120px;
+    width: auto;;
+
+}
+
+@media (max-width:480px) {
+    .home{
+        display: none;
+    }
+}

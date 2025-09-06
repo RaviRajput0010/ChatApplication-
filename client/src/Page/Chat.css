@@ -1,0 +1,213 @@
+.chat{
+    height: 100%;
+    width: 75%;
+}
+
+.chat .chatheader
+{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.cheatheaderright
+{
+    margin-right: 10px;
+}
+
+.cheatheaderright button
+{
+     height: 40px;
+    width: 150px;
+    color: white;
+    background-color: blue;
+    border-radius: 15px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    transition: 0.2s ease-in-out;
+    font-weight: bold;
+}
+
+.cheatheaderright button:hover
+{
+    transform:scale(0.9) ;  
+    font-weight: bold;
+    background-color: rgb(11, 11, 140); 
+}
+
+.chat .chatinput
+{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.chat .chatheader .usernameandprofile 
+{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+}
+
+
+.chat .chatheader .usernameandprofile img
+{
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+}
+
+.chatinput input
+{
+    height: 42%;
+    width: 60%;
+    border: none;
+    background-color: #DDDDDD;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 15px;
+
+}
+
+.chat .chatinput img
+{
+    height: 20px;
+    width: 20px;
+}
+
+
+.chat .chatbox
+{
+    height: 70%;
+    width: 100%;
+    background-color: #dbeafe;
+    background-image: url('chatbg.jpg');
+        display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    overflow-y: auto;
+    padding-top: 10px;
+}
+
+.message-row {
+  display: flex;
+  align-items: flex-end;
+  margin: 5px 10px;
+}
+
+.sender-row {
+  justify-content: flex-end;
+}
+
+.receiver-row {
+  justify-content: flex-start;
+
+}
+
+.profile-pic {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+  align-self: flex-start;
+  margin-top: 15px;
+}
+
+.sendermsg {
+  max-width: 70%;
+  background-color: purple;
+  color: white;
+  font-size: 16px;
+  padding: 0 10px;
+  border-radius: 25px;
+  align-self: flex-end;
+}
+
+.receivermsg {
+  max-width: 70%;
+  background-color: white;
+  color: #64748B;
+  font-size: 16px;
+  padding: 0 10px;
+  border-radius: 25px;
+}
+
+.time {
+  font-size: 10px;
+  font-style: italic;
+  color: grey;
+  margin-left: 8px;
+}
+
+.chatbox::-webkit-scrollbar
+{
+    display: none;
+}
+
+
+@media (max-width:480px) {
+  .chat{
+    width: 90%;
+   
+  }
+
+  
+.chat .chatheader .usernameandprofile{
+    width: 60%;
+  }
+
+  .chat .chatheader .usernameandprofile img
+{
+    height: 35px;
+    width: 35px;
+  
+}
+
+
+.chat .chatheader
+{
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+    
+}
+
+.sendermsg {
+  
+  font-size: 13px;
+  padding: 0 10px;
+}
+
+.receivermsg {
+
+  font-size: 13px;
+  padding: 0 10px;
+
+}
+
+.time {
+  font-size: 8px;
+
+}
+
+
+.chatinput input
+{
+    height: 42%;
+    width: 70%;
+}
+
+}

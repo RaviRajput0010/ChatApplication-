@@ -1,0 +1,139 @@
+nav
+{
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 0.2px solid #dbeafa;
+}
+
+nav .left
+{
+    height: 100%;
+    width: 50%;
+   display: flex;
+   align-items: center;
+   padding: 0px 10px;
+}
+
+nav .left img
+{
+    height: 100px;
+    width: 100px;
+
+}
+
+nav .right
+{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+    gap: 20px;
+  
+}
+
+nav .right button
+{
+    height: 40px;
+    width: 100px;
+    color: white;
+    background-color: blue;
+    border-radius: 15px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    transition: 0.2s ease-in-out;
+    font-weight: bold;
+}
+
+
+nav .right button:hover
+{
+    
+    transform:scale(0.9) ;  
+    font-weight: bold;
+    background-color: rgb(11, 11, 140);    
+}
+
+.profile-section {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-box {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.profile-box img.profile-pic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.profile-box input {
+  width: 100%;
+  padding: 5px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.profile-box button {
+  
+  width: 100%;
+  margin-top: 5px;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.profile-box button:hover {
+  background: #0056b3;
+}
+
+
+@media (max-width:480px) {
+
+  nav .right button
+{
+    height:30px;
+    width: 100px;
+    padding: 2px 10px;
+
+    font-size: 12px;
+   
+}
+.profile-box
+{
+  max-width: 300px;
+  height: 250px;
+  width: 200px;
+  margin-top: 5px;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+}
+
+
+}

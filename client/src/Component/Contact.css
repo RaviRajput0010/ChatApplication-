@@ -1,0 +1,186 @@
+.contact
+{
+    height: 100%;
+    width: 25%;
+    border-right: 0.2px solid #dbeafe;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+    gap: 5px;
+}
+
+.contact .singlecontact
+{
+    height: 60px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.1px #ddd;
+    border-radius: 5px;
+    padding: 0px 15px;
+    
+}
+
+.contact .singlecontact img
+{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.singlecontact:hover
+{
+    background-color:#E0E0E0;
+}
+
+.singlecontact p
+{
+    font-size: 16px;
+}
+
+.contact .search
+{
+    height: 20%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact .allcontact
+{
+    height: 80%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.allcontact::-webkit-scrollbar
+{
+    display: none;
+}
+
+.search input
+{
+    height: 30px;
+    width: 90%;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background-color: #E2E8F0;
+    padding-left: 10px;
+}
+
+.search .one
+{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.search .inpuutt
+{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#grouplogo
+{
+    height: 30px;
+    width: 30px;
+}
+
+.rightdiv
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.singlecontact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pic+name on left, delete on right */
+  padding: 10px 12px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background 0.2s ease;
+}
+
+.singlecontact:hover {
+  background:#E0E0E0;
+}
+
+.singlecontact img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.singlecontact div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1; /* take remaining space */
+}
+
+.hide{
+  display: none;
+}
+
+.singlecontact p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+/* delete button */
+.delete-btn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.2s;
+}
+
+.delete-btn:hover {
+  color: red;
+}
+
+/* unread dot */
+.unread-dot {
+  color: red;
+  font-size: 14px;
+  margin-left: 6px;
+}
+
+@media (max-width:480px) {
+  .contact
+{
+    
+    width: 80%;
+    
+}
+
+  
+}
+
+#roompic
+{
+  height: 30px;
+  width: auto;
+
+}

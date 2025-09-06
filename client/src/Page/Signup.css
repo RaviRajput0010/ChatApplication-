@@ -1,0 +1,63 @@
+.maindiv2
+{
+    height: 88vh;
+    width: 100vw;
+    background-color: #DBEAFE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.maindiv2 .boxdiv2
+{
+    height: 60vh;
+    width: 300px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius:10px ;
+    padding: 10px 20px;
+    border: #ddd solid  ;
+    border-style: none;
+    color: #475881;
+}
+
+.inputbox
+{
+    border-radius: 5px;
+    color: #475569;
+    padding-left:15px ;
+    height: 30px;
+    width: 270px;
+    border-style: none;
+    border: #ddd solid;
+    border:none;
+    outline: #CBD5E1 solid;
+    
+}
+
+.submitbtn
+{
+    height: 40px;
+    width: 290px;
+    background-color: #2563EB;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+
+.submitbtn:hover
+{
+    background-color: #1F54C8;
+    scale: 1.005;
+}
+
+p span
+{
+    color: #2563EB;
+}

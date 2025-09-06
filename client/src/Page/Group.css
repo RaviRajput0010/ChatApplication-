@@ -1,0 +1,155 @@
+
+.usernameandprofile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.usernameandprofile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.contacts-box ul,
+.members-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contacts-box li,
+.members-box li {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.contacts-box li:hover,
+.members-box li:hover {
+  background-color: #f0f0f0;
+}
+
+.admin-tag {
+  color: green;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.chatbox .addmemberbox
+{
+  height: 370px;
+  width: 250px;
+  background-color: #ddd;
+  position:fixed;
+  z-index: 1;
+  align-self: flex-end;
+  border-radius: 15px;
+  margin-right: 10px;
+}
+
+
+.chatbox .addmemberbox button
+{
+  position: relative;
+  align-self: flex-end;
+}
+
+.addmemberbox .singlecontact
+{
+    height: 60px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.1px #ddd;
+    border-radius: 5px;
+    padding: 0px 15px;
+    
+}
+
+.addmemberbox .singlecontact img
+{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.chatheader {
+  display: flex;
+  justify-content: space-between; /* spread left and right */
+  align-items: center;
+
+  border-bottom: 1px solid #ddd;
+
+}
+
+.usernameandprofile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.usernameandprofile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.delete-btn button {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin-right: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.delete-btn button:hover {
+  background-color: darkred;
+}
+
+@media (max-width:480px) {
+
+  .chatheaderright
+  {
+    display: flex;
+    gap: 3px;
+  }
+
+  .chatheaderright #addandview
+  {
+    height: 30px;
+    width: 80px;
+    border-radius: 14px;
+    background-color: blue;
+    color: white;
+    outline: none;
+    border: none;
+  }
+
+  .chatheaderright #addandview:hover ,  .addmemberbox #addandview:hover
+  {
+    background-color: rgb(37, 37, 136);
+  }
+  
+  .addmemberbox #addandview
+  {
+     height: 30px;
+    width: 80px;
+    border-radius: 14px;
+    background-color: blue;
+    color: white;
+    outline: none;
+    border: none;   
+  }
+
+  
+.chatbox .addmemberbox
+{
+  height: 300px;
+  width: 230px;
+}
+
+
+}
