@@ -30,7 +30,7 @@ function Chat() {
 
     // ✅ save to backend
     try {
-      fetch('https://chatapplication-fyaq.onrender.com/message', {
+      fetch('http://localhost:5000/message', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(obj),
@@ -63,7 +63,7 @@ function Chat() {
   useEffect(() => {
     const fetchChats = async () => {
       try {
-        const res = await fetch(`https://chatapplication-fyaq.onrender.com/allchats/${conversationid}`)
+        const res = await fetch(`http://localhost:5000/allchats/${conversationid}`)
         const data = await res.json()
         setmessagearray(data)
       } catch (error) {
@@ -109,7 +109,7 @@ function Chat() {
       {/* Show profile only for receiver */}
       {!isSender && (
         <img
-          src={profile}
+          src={profile == null ? images.noprofile : profile}
           alt="dp"
           className="profile-pic"
         />
