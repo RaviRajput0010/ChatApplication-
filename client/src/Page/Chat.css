@@ -138,8 +138,8 @@
 
 .receivermsg {
   max-width: 70%;
-  background-color: white;
-  color: #64748B;
+  background-color: rgb(78, 62, 219);
+  color: white;
   font-size: 16px;
   padding: 0 10px;
   border-radius: 25px;
@@ -148,7 +148,7 @@
 .time {
   font-size: 10px;
   font-style: italic;
-  color: grey;
+  color: white;
   margin-left: 8px;
 }
 
@@ -207,7 +207,12 @@
 .chatinput input
 {
     height: 42%;
-    width: 70%;
+    width: 85%;
 }
 
+
+.chat .chatheader
+{
+    height: 10%;
+}
 }
