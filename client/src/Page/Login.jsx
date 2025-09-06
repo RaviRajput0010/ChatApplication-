@@ -22,13 +22,19 @@ function Login() {
   const jump=useNavigate();
   
   async function handleSubmit() {
+
+    const obj = { name:name,email:email,password:password,phone:phone,image:image!==""?image:null,desc:desc}
+
+
+
     try {
-      const response = await fetch('https://chatapplication-fyaq.onrender.com/signup', {
+      const response = await fetch('http://localhost:5000/signup', {
         method: 'Post',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name,email,password,phone,image,desc}),
+        
+        body: JSON.stringify(obj),
       });
 
       const data = await response.json();
