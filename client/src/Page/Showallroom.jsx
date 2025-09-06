@@ -14,7 +14,7 @@ function Showallroom() {
 
   // Fetch all rooms from DB
   useEffect(() => {
-    fetch("http://localhost:5000/allrooms") 
+    fetch("https://chatapplication-fyaq.onrender.com/allrooms") 
       .then((res) => res.json())
       .then((data) => {
         setRooms(data);
@@ -40,7 +40,7 @@ function Showallroom() {
       };
   
       try {
-        const response = await fetch('http://localhost:5000/newgroupcreate', {
+        const response = await fetch('https://chatapplication-fyaq.onrender.com/newgroupcreate', {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(obj)
