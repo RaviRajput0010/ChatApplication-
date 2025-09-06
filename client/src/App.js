@@ -30,8 +30,11 @@ function App() {
        <ToastContainer />
        <Navbar/>
       <div className='container'>
-         {username==null &&!showcontacts?'':<Contact/>}
-         {
+          {
+               username!==null && showcontacts? <Contact/> : ''
+          }
+            
+            {
                   showcontacts && screenSize<480 ? '' : ( <Routes>     
        
         <Route path='/login' element={<Signup/>} />
@@ -44,8 +47,9 @@ function App() {
         <Route path='/showroom' element={<Showallroom/>}/>
         
         
-        <Route path="/" element={username ? <Homepage /> : <Signup/>} />
+        <Route path="/" element={<Homepage />} />
 
+      
         </Routes>)
 
          }
