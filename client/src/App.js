@@ -46,8 +46,7 @@ function App() {
         <Route path='/room' element={<Room/>}/>
         <Route path='/showroom' element={<Showallroom/>}/>
         
-        
-        <Route path="/" element={<Homepage />} />
+        <Route path="/" element={username ? <Homepage /> : <Signup/>} />
 
       
         </Routes>)
