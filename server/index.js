@@ -19,7 +19,7 @@ const group = mongoose.model("group", GroupSchema);
 
 
 app.use(cors({
-  origin: "http://localhost:3000", // Allow your frontend's origin
+  origin: "https://chat-application-sigma-seven.vercel.app", // Allow your frontend's origin
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
