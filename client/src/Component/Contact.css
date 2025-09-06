@@ -170,9 +170,12 @@
 @media (max-width:480px) {
   .contact
 {
-    
-    width: 80%;
-    
+    width: 90%;
+}
+
+.search input
+{
+    width: 98%;
 }
 
   
