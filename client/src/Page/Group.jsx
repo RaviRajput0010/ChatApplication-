@@ -32,7 +32,7 @@ function Group() {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/groups/addmember", {
+      const response = await fetch("https://chatapplication-fyaq.onrender.com/api/groups/addmember", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -71,7 +71,7 @@ function Group() {
     setmessage('');
 
     try {
-      await fetch("http://localhost:5000/addgrpmessage", {
+      await fetch("https://chatapplication-fyaq.onrender.com/addgrpmessage", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(obj),
@@ -99,7 +99,7 @@ function Group() {
   useEffect(() => {
     if (!id) return;
 
-    fetch(`http://localhost:5000/groupmessages/${id}`)
+    fetch(`https://chatapplication-fyaq.onrender.com/groupmessages/${id}`)
       .then(res => res.json())
       .then(data => {
         setmessagearray(data);
