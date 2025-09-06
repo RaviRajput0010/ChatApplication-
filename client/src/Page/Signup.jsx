@@ -18,7 +18,7 @@ function Signup() {
   async function handleSubmit() {
     
     try {
-      const response = await fetch('http://localhost:5000/login', {
+      const response = await fetch('https://chatapplication-fyaq.onrender.com/login', {
         method: 'Post',
         headers: {
           'Content-Type': 'application/json',
