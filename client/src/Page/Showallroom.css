@@ -53,3 +53,12 @@
   scale: 1.02;
   background-color: rgb(6, 6, 168);
 }
+
+@media (max-width:480px) {
+
+  .all-rooms {
+
+    width: 90%;
+}
+  
+}
