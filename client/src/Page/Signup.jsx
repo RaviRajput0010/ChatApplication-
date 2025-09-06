@@ -33,23 +33,15 @@ function Signup() {
       {
         toast.error("Account Authentication Failed")
       }
-      else
-      {
-           
-      setTimeout(() => {
-        toast.success("Account Authentication Successfull")
-       localStorage.setItem('userdata', JSON.stringify(data))
-       setusername(data.name);
-        if(screenSize < 480) 
-          {
-            setshowcontacts(true)
-          } 
-      navigate('/')
+        else {
+  toast.success("Account Authentication Successfull");
+  localStorage.setItem('userdata', JSON.stringify(data));
+  setusername(data.name);
 
-      },3000);
-     
-      }
-      
+    setshowcontacts(true);
+    navigate('/');   // yahan le jao mobile pe bhi
+
+  }     
     } catch (error) {
       console.error('Error:', error);
       toast.error("Account Authentication Failed")
