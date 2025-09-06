@@ -30,7 +30,10 @@ const GroupSchema = new mongoose.Schema({
     type: String, // optional - for group photo URL
     default: ""
   },
-
+   type:{
+    type:String,
+    required:true
+   },
   createdBy: {
     type: String, // user ID or name of admin
     required: true

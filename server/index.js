@@ -32,6 +32,29 @@ app.get('/',(req,res)=>{
     res.send('Hello from server')
 
 })
+// make sure this middleware exists *before* your routes
+app.use((req, res, next) => { req.io = io; next(); });
+
+app.delete("/delete/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deleted = await group.findByIdAndDelete(id);
+
+    if (!deleted) {
+      return res.status(404).json({ success: false, error: "Room not found" });
+    }
+
+    if (req.io) {
+      req.io.to(id).emit("room-deleted", { roomId: id });
+    }
+
+    return res.status(200).json({ success: true, message: "Room deleted successfully" });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ success: false, error: "Server error" });
+  }
+});
+
 
 app.post("/login", async (req, res) => {
 
@@ -96,7 +119,7 @@ app.delete('/deletegroup/:id', async (req, res) => {
 
 app.post('/newgroupcreate', async (req, res) => {
   try {
-    const { name, img, createdBy } = req.body; // ✅ match frontend
+    const { name, img, createdBy,type } = req.body; // ✅ match frontend
 
     if (!name || !img || !createdBy) {
       return res.status(400).json({ success: false, error: "Missing fields" });
@@ -107,7 +130,8 @@ app.post('/newgroupcreate', async (req, res) => {
     groupImage: img,
     createdBy: createdBy,
     members: [createdBy],
-    messages: []
+    messages: [],
+    type:type
     });
 
     await newGroup.save();
@@ -117,6 +141,17 @@ app.post('/newgroupcreate', async (req, res) => {
     res.status(500).json({ success: false, error: "Server error" });
   }
 });
+
+app.get('/allrooms', async (req, res) => {
+  try {
+    const rooms = await group.find({ type: "room" });
+    res.status(200).json(rooms);
+  } catch (error) {
+    console.error("Error fetching rooms:", error);
+    res.status(500).json({ error: "Failed to fetch rooms" });
+  }
+});
+
 
 app.post("/api/groups/addmember", async (req, res) => {
   try {
@@ -353,7 +388,9 @@ console.log('allusers',users)
   });
 
   socket.on("sendMessage", (obj) => {
-    io.to(obj.groupId).emit("receiveMessage", obj);
+    console.log('msg',obj);
+    
+    io.to(obj.roomId).emit("receiveMessage", obj);
   });
 
   socket.on('disconnect', () => {
