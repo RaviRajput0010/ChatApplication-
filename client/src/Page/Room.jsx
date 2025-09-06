@@ -74,7 +74,7 @@ async function deleteRoom() {
   setDeleting(true);
 
   try {
-    const res = await fetch(`https://chatapplication-fyaq.onrender.com/delete/${id}`, { method: "DELETE" });
+    const res = await fetch(`http://localhost:5000/delete/${id}`, { method: "DELETE" });
     const data = await res.json().catch(() => ({}));
 
     if (res.ok && data.success !== false) {
@@ -106,7 +106,7 @@ async function deleteRoom() {
           <img src={profile == null ? images.noprofile : profile} alt="Room" />
           <div>
             <p>{name}</p>
-            <p>Created by {createdBy}</p>
+           {screenSize <480 ? '' : <p>Created by {createdBy}</p>} 
           </div>
         </div>
          {username===createdBy?( <div className="delete-btn">
