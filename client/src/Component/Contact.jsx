@@ -59,6 +59,8 @@ function Contact() {
       if (result.success) {
         setgrouparray((prev) => [...prev, result.group]);
         toast.success("Group created");
+        setshowcontacts(true)
+      
         
       } else {
         toast.error("Failed to create group");
