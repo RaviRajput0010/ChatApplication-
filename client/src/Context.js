@@ -38,7 +38,7 @@ useEffect(()=>{
   
  if (!username) return;
 
-  const socket = io("http://localhost:5000");
+  const socket = io("https://chatapplication-fyaq.onrender.com");
   socket.emit('user-joined', username);
   setsocket(socket);
 
@@ -74,7 +74,7 @@ useEffect(()=>{
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await fetch('http://localhost:5000/allusers');
+        const res = await fetch('https://chatapplication-fyaq.onrender.com/allusers');
         const data = await res.json(); // convert response to JSON
         setdata(data); // store the contacts in state
         console.log('contacts',data)
@@ -89,7 +89,7 @@ useEffect(()=>{
    useEffect(() => {
     async function fetchData() {
       try {
-        const res = await fetch(`http://localhost:5000/fetchgroup/${username}`);
+        const res = await fetch(`https://chatapplication-fyaq.onrender.com/fetchgroup/${username}`);
         const data = await res.json(); // convert response to JSON
         setgrouparray(data); // store the contacts in state
         console.log('grouparray',data)
