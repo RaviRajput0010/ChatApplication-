@@ -94,6 +94,7 @@ function Contact() {
               } />
           </div>
         </div>
+         <br/>
         <div className="inpuutt">
           <input
             type="text"
