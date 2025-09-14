@@ -100,6 +100,7 @@ function Contact() {
             type="text"
             onChange={(x) => setsearchtext(x.target.value)}
             value={searchtext}
+             placeholder='Find By Contact Name '
           />
         </div>
       </div>
