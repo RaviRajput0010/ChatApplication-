@@ -18,8 +18,9 @@
     justify-content: space-between;
     align-items: center;
     border: 0.1px #ddd;
-    border-radius: 5px;
+    border-radius: 7px;
     padding: 0px 15px;
+    border: 2px solid #ddd;
     
 }
 
@@ -64,12 +65,12 @@
 
 .search input
 {
-    height: 30px;
+    height: 33px;
     width: 90%;
     border-radius: 20px;
     outline: none;
-    border: none;
-    background-color: #E2E8F0;
+    border: 1px solid rgb(97, 93, 93);
+    background-color: #ddd;
     padding-left: 10px;
 }
 
