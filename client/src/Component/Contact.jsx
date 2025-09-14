@@ -49,7 +49,7 @@ function Contact() {
     };
 
     try {
-      const response = await fetch('https://chatapplication-fyaq.onrender.com/newgroupcreate', {
+      const response = await fetch('http://localhost:5000/newgroupcreate', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(obj)
@@ -60,7 +60,6 @@ function Contact() {
         setgrouparray((prev) => [...prev, result.group]);
         toast.success("Group created");
         setshowcontacts(true)
-      
         
       } else {
         toast.error("Failed to create group");
@@ -100,7 +99,7 @@ function Contact() {
             type="text"
             onChange={(x) => setsearchtext(x.target.value)}
             value={searchtext}
-             placeholder='Find By Contact Name '
+            placeholder='Find By Contact Name '
           />
         </div>
       </div>
@@ -109,7 +108,7 @@ function Contact() {
       {grouparray
         .filter(group => group.type === "group" && group.members?.includes(username))
         .map((i, index) => (
-          <div key={index} className='singlecontact' >
+          <div key={index} className='singlecontact' style={{height:'70px'}} >
             <div
               style={{ cursor: 'pointer' , justifyContent:'space-between' }}
               onClick={() => {
