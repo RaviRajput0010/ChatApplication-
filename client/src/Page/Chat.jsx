@@ -133,6 +133,7 @@ function Chat() {
           type='text'
           onChange={(e) => setmessage(e.target.value)}
           value={message}
+          placeholder='Message'
           onKeyUp={(e) => e.key === 'Enter' && sendmsg()}
         />
         <img onClick={sendmsg} src={images.send} alt='' />
