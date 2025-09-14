@@ -1,6 +1,6 @@
 .maindiv2
 {
-    height: 88vh;
+    min-height: 100dvh;
     width: 100vw;
     background-color: #DBEAFE;
     display: flex;
@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    overflow: hidden;
 }
 
 .maindiv2 .boxdiv2
