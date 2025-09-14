@@ -22,6 +22,12 @@
     align-items: center;     /* center content horizontally */
 }
 
+.inputbox1:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+
 .boxx {
     display: flex;
     flex-direction: row;
@@ -53,7 +59,7 @@
     color: #475569;
     padding-left: 15px;
     height: 40px;
-    width: 100%;
+    width: 90%;
     border: 1px solid #86B7FE;
     outline: none;
     font-size: 14px;
@@ -91,8 +97,9 @@
     }
 
     .boxx {
+        height: 100px;
         flex-direction: column;
-        gap: 10px;
+        gap: 1px;
     }
 
     .inputbox1 {
@@ -100,7 +107,19 @@
     }
 
     .submitbtn1 {
-        width: 100%;
-        font-size: 16px;
+        width: 90%;
+        font-size: 15px;
     }
+
+.inputGroup label {
+    font-size: 15px;
+}
+
+.inputbox1 {
+    padding-left: 15px;
+    height: 30px;
+    width: 90%;
+}
+
+
 }
