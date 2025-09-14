@@ -7,7 +7,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items:center;
-    gap: 5px;
 }
 
 .contact .singlecontact
@@ -107,14 +106,6 @@
     gap: 10px;
 }
 
-.singlecontact {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* pic+name on left, delete on right */
-  padding: 10px 12px;
-  border-bottom: 1px solid #e0e0e0;
-  transition: background 0.2s ease;
-}
 
 .singlecontact:hover {
   background:#E0E0E0;
